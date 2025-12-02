@@ -62,6 +62,11 @@ class Golden implements AnimalName {
   }
 }
 
-const goldenOne = new Golden("Bentley");
+function greetTypeScript(name: string): string {
+  return `Hello ${name}`;
+}
 
+console.log(greetTypeScript("RealCodingRJ"));
+
+const goldenOne = new Golden("Bentley");
 console.log(goldenOne.nameLog());
