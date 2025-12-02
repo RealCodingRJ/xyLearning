@@ -1,3 +1,5 @@
+import { calculationX } from "./AddFunc/AddFunction.ts";
+
 let message: string = "Hello TypeScript";
 
 console.log(message as string);
@@ -7,18 +9,21 @@ interface Numbers {
   b: number;
 }
 
-function addNumbers(a: Numbers, b: Numbers): any {
-  return a.a + b.b;
+interface Rad {
+  x: number;
 }
 
-message = "Working".toUpperCase();
+function calculatePI(rad: Rad): number {
+  return 3.14 * rad.x * rad.x;
+}
 
-const number: Numbers = {
-  a: 1,
-  b: 2,
+let piCalc: Rad = {
+  x: 10,
 };
 
-console.log(`1 + 2 = ${addNumbers(number, number) as number}`);
+console.log(calculatePI(piCalc));
+message = "Working".toUpperCase();
+
 console.log(1337 as number);
 
 interface User {
@@ -26,6 +31,8 @@ interface User {
   name: string;
   email: string;
 }
+
+console.log(calculationX);
 
 function getUser(user: User): string {
   return `Name: ${user.name} Email: ${user.email}`;
@@ -38,3 +45,23 @@ let personUser: User = {
 };
 
 console.log(getUser(personUser));
+
+interface AnimalName {
+  name: string;
+  nameLog(): void;
+}
+
+class Golden implements AnimalName {
+  public name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  nameLog() {
+    return "name: " + this.name;
+  }
+}
+
+const goldenOne = new Golden("Bentley");
+
+console.log(goldenOne.nameLog());
