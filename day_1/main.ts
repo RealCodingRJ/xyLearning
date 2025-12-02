@@ -4,11 +4,6 @@ let message: string = "Hello TypeScript";
 
 console.log(message as string);
 
-interface Numbers {
-  a: number;
-  b: number;
-}
-
 interface Rad {
   x: number;
 }

@@ -1,3 +1,8 @@
+interface Numbers {
+  a: number;
+  b: number;
+}
+
 function addNumbers(a: Numbers, b: Numbers): any {
   return a.a + b.b;
 }
