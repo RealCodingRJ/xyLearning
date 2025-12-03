@@ -1,17 +1,13 @@
 {
-  "name": "day_1",
+  "name": "day-2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
-  "devDependencies": {
-    "@types/node": "^24.10.1"
-  }
+  "type": "commonjs"
 }
